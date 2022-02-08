@@ -3,7 +3,7 @@ variable public_key_path {
 }
 variable app_disk_image {
   description = "Disk image for reddit app"
-  default = "docker-reddit-base-1644257437"
+  default = "docker-reddit-base-1644308331"
 }
 variable subnet_id {
   description = "Subnets for modules"
