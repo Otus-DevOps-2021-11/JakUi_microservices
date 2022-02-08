@@ -22,5 +22,4 @@ sleep 5m
 sudo docker run hello-world
 
 # Configure Docker
-sudo groupadd docker
-sudo usermod -aG docker $USER
+sudo groupadd docker; sudo usermod -aG docker $USER
