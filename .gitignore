@@ -8,6 +8,6 @@ key.json
 *.retry
 build_info.txt
 prometheus/
-*.env
+src/.env
 ## python specific
 *.pyc
