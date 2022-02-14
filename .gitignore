@@ -6,8 +6,8 @@ packer/variables.json
 .terraform/
 key.json
 *.retry
-docker-compose.yml
 build_info.txt
 prometheus/
+src/.env
 ## python specific
 *.pyc
