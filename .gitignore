@@ -7,7 +7,6 @@ packer/variables.json
 key.json
 *.retry
 build_info.txt
-prometheus/
 src/.env
 ## python specific
 *.pyc
