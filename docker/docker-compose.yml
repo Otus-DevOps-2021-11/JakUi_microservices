@@ -8,26 +8,26 @@ services:
       - back_net
   ui:
     build: src/ui
-    image: ${USERNAME}/ui:1.0
+    image: ${USER_NAME}/ui:1.0
     ports:
       - ${port}:${port}/tcp
     networks:
       - front_net
   post:
     build: src/post-py
-    image: ${USERNAME}/post:1.0
+    image: ${USER_NAME}/post:1.0
     networks:
       - back_net
       - front_net
   comment:
     build: src/comment
-    image: ${USERNAME}/comment:1.0
+    image: ${USER_NAME}/comment:1.0
     networks:
       - back_net
       - front_net
 
   prometheus:
-    image: ${USERNAME}/prometheus
+    image: ${USER_NAME}/prometheus
     ports:
       - '9090:9090'
     volumes:
