@@ -54,3 +54,6 @@ JakUi microservices repository
 папки, содержащей Docker-compose файл. Также чтобы установить другое имя проекта, можно вызвать команду
 `docker-compose --project-name NAME {up|down|...}` либо добавить переменную `COMPOSE_PROJECT_NAME=желаемое_имя_проекта`
 в файле `.env`.
+## Docker Hub
+
+Мой docker hub находится по ссылке https://hub.docker.com/repository/docker/jakui/prometheus
