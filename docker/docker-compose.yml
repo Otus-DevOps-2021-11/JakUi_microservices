@@ -1,16 +1,16 @@
-version: "3.3"
+version: '3.3'
 services:
   post_db:
-    image: mongo:${mongodb_version}
+    image: mongo:3.2
     volumes:
-      - post_db:${path_to_db}
+      - post_db:/data/db
     networks:
       - back_net
   ui:
     build: ../src/ui
     image: ${USER_NAME}/ui:1.0
     ports:
-      - ${port}:${port}/tcp
+      - ${port}:9292/tcp
     networks:
       - front_net
   post:
@@ -25,7 +25,6 @@ services:
     networks:
       - back_net
       - front_net
-
   prometheus:
     image: ${USER_NAME}/prometheus
     ports:
@@ -39,7 +38,6 @@ services:
     networks:
       - back_net
       - front_net
-
   node-exporter:
     image: prom/node-exporter:v0.15.2
     user: root
@@ -61,19 +59,4 @@ volumes:
 
 networks:
   front_net:
-    driver: bridge
-    driver_opts:
-      com.docker.monwork.enable_ipv6: 'false'
-    ipam:
-      driver: default
-      config:
-       - subnet: 10.0.1.0/24
-
   back_net:
-    driver: bridge
-    driver_opts:
-      com.docker.monwork.enable_ipv6: 'false'
-    ipam:
-      driver: default
-      config:
-       - subnet: 10.0.2.0/24
