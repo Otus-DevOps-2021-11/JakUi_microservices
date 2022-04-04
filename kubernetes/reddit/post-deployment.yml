@@ -17,7 +17,7 @@ spec:
       name: post
       labels:
         app: reddit
-        component: comment
+        component: post
     spec:
       containers:
       - image: jakui/post
