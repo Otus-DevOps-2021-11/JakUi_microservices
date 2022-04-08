@@ -14,10 +14,3 @@ RUN cd /reddit && rm Gemfile.lock && bundle install
 RUN chmod 0777 /start.sh
 
 CMD ["/start.sh"]
-
-docker-machine create \
- --driver generic \
- --generic-ip-address=51.250.9.81 \
- --generic-ssh-user yc-user \
- --generic-ssh-key ~/.ssh/id_rsa \
- docker-host
