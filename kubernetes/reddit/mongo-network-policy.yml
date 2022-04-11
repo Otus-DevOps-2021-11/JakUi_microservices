@@ -6,15 +6,8 @@ metadata:
   labels:
     app: reddit
 spec:
-  podSelector:
-    matchLabels:
-      app: reddit
-      component: mongo
+  podSelector: {}
+  ingress:
+  - {}
   policyTypes:
   - Ingress
-  ingress:
-  - from:
-    - podSelector:
-        matchLabels:
-          app: reddit
-          component: comment
